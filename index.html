@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
+    <title>Warning for Sada Hussain</title>
+    <meta name="description" content="Sada Hussain, this is your final warning. After the countdown ends, your information will be forwarded to the law enforcement authorities and the Punjab Police.">
+    <meta name="keywords" content="Sada Hussain, warning, countdown, law enforcement, Punjab Police">
+    <meta name="author" content="Anonymous Global">
+
     <style>
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -20,6 +25,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
         #message {
             font-size: 1.2em;
@@ -27,9 +33,18 @@
             text-align: center;
             margin-top: 20px;
         }
+        .warning {
+            color: red;
+            font-weight: bold;
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+    <div class="warning">WARNING: SADA HUSSAIN</div>
+    <div class="warning">YOUR TIME IS RUNNING OUT</div>
     <div id="countdown">
         <p id="timer"></p>
     </div>
@@ -60,10 +75,10 @@
             if (distance < 0) {
                 clearInterval(interval);
                 countdownElement.style.display = 'none';
-                messageElement.innerHTML = "You were warned, Sada Hussain. Your information has been forwarded to the Law enforcement authorities and the Punjab Police.";
+                messageElement.innerHTML = "You were warned, Sada Hussain. Your information has been forwarded to the law enforcement authorities and the Punjab Police.";
                 localStorage.removeItem('endDate');
             }
         }, 1000);
     </script>
 </body>
-  </html>
+</html>
