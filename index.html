@@ -3,82 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warning for Sada Hussain</title>
-    <meta name="description" content="Sada Hussain, this is your final warning. After the countdown ends, your information will be forwarded to the law enforcement authorities and the Punjab Police.">
-    <meta name="keywords" content="Sada Hussain, warning, countdown, law enforcement, Punjab Police">
-    <meta name="author" content="Anonymous Global">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f2f2f2;
-        }
-        #countdown {
-            font-size: 2em;
-            text-align: center;
-            background-color: #ffcccb;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        #message {
-            font-size: 1.2em;
-            color: red;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .warning {
-            color: red;
-            font-weight: bold;
-            font-size: 1.5em;
-            margin: 20px 0;
-            text-align: center;
-        }
-    </style>
+    <title>Scammer Warning: ROSHAN ALI LAKIR</title>
+    <meta name="description" content="Warning about scammer ROSHAN ALI LAKIR. Pretends to be from Benazir Support Program and scams people by asking for their CNIC, EasyPaisa, JazzCash numbers, and money.">
+    <meta name="keywords" content="scammer, ROSHAN ALI LAKIR, Benazir Support Program, CNIC, EasyPaisa, JazzCash, fraud, warning">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="warning">WARNING: SADA HUSSAIN</div>
-    <div class="warning">YOUR TIME IS RUNNING OUT</div>
-    <div id="countdown">
-        <p id="timer"></p>
+    <div id="warning">
+        <h1>Scammer Alert: ROSHAN ALI LAKIR</h1>
+        <p>ROSHAN ALI LAKIR, you have been warned. Your details will be exposed if you do not cease your fraudulent activities immediately.</p>
     </div>
-    <div id="message"></div>
-
-    <script>
-        const countdownElement = document.getElementById('timer');
-        const messageElement = document.getElementById('message');
-        
-        // Set the end date for the countdown (48 hours from now)
-        const endDate = new Date(localStorage.getItem('endDate') || (new Date().getTime() + 48 * 60 * 60 * 1000));
-        localStorage.setItem('endDate', endDate);
-
-        // Update the countdown every second
-        const interval = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = new Date(endDate).getTime() - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element
-            countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s `;
-
-            // If the countdown is finished, write a warning message
-            if (distance < 0) {
-                clearInterval(interval);
-                countdownElement.style.display = 'none';
-                messageElement.innerHTML = "You were warned, Sada Hussain. Your information has been forwarded to the law enforcement authorities and the Punjab Police.";
-                localStorage.removeItem('endDate');
-            }
-        }, 1000);
-    </script>
+    <div id="countdown">
+        <h1>Countdown Timer</h1>
+        <div id="timer">
+            <span id="days"></span> Days 
+            <span id="hours"></span> Hours 
+            <span id="minutes"></span> Minutes 
+            <span id="seconds"></span> Seconds
+        </div>
+    </div>
+    <div id="expiredMessage" style="display: none;">
+        <h1>Scammer Alert: ROSHAN ALI LAKIR</h1>
+        <p>
+            <strong>CNIC:</strong> 4120587700815<br>
+            <strong>Address:</strong> 1 Aghamani Meharr Goth Aghamani Dadu<br>
+            <strong>Phone Numbers:</strong> 
+            <ul>
+                <li>03403989001</li>
+                <li>03421240321</li>
+                <li>03430036619</li>
+                <li>03433358009</li>
+                <li>03473601230</li>
+            </ul>
+            ROSHAN ALI LAKIR pretends to be from the Benazir Support Program and tells users that they have received money (e.g., 75000). For processing, he asks for the user's CNIC number, EasyPaisa or JazzCash number, and some money.
+        </p>
+        <p>This scammer has been reported. Stay vigilant!</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 QuickSilver @ Anonymous Global🌐 </p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
