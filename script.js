@@ -1,5 +1,5 @@
 // Set the date we're counting down to (48 hours from when the page is put live)
-const countDownDate = new Date("2024-07-23T12:00:00").getTime(); // Replace with the exact end time
+const countDownDate = new Date("2024-07-22T12:00:00").getTime(); // Replace with the exact end time
 
 // Update the count down every 1 second
 const countdownFunction = setInterval(function() {
